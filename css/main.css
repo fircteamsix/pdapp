@@ -1,0 +1,29 @@
+#login-links{
+    text-align: center;
+}
+#login-links p{
+    padding-top: 0.2em;
+}
+.btn-large{
+    background-color: #fa4c4c;
+    width: 100%;
+}
+.card-action{
+    height: 210px;
+}
+.teal.lighten-1{
+    background: url("../img/logo2.png") no-repeat center !important;
+}
+.form-field button{
+    margin-top: 1em;
+}
+html{
+    color: #D3D3D3 !important;
+}
+.card-content i{
+    position: absolute;
+    float: right;
+    margin: 0 -23px;
+    color: #aaa;
+    transition: 0.3s;
+}
