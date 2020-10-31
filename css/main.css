@@ -17,9 +17,6 @@
 .form-field button{
     margin-top: 1em;
 }
-html{
-    color: #D3D3D3 !important;
-}
 .card-content i{
     position: absolute;
     float: right;
@@ -27,7 +24,7 @@ html{
     color: #aaa;
     transition: 0.3s;
 }
-#nome, #nasc, #email, #email, #telefone, #cidade, #uf, #senha{
+#nome, #nasc, #email, #email, #telefone, #cidade, #uf, #senha, #sobrenome, #motivo, #mensagem{
     border-radius: 2px !important;
     box-shadow: .1px .1px 0.7px rgba(51,51,51,15) !important;
 }
@@ -35,3 +32,25 @@ html{
 #ajust{
     text-align: justify;
 }
+
+nav {
+    background-color: #ffffff !important;
+}
+
+i.material-icons {
+    color: #000;
+}
+.back-btn {
+    margin: 10px 10px !important;
+    color: #333333;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+  }

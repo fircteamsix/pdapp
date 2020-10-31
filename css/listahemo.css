@@ -1,0 +1,31 @@
+.back-btn {
+  color: #333333;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #ffffff !important;
+}
+
+i.material-icons {
+  color: #000;
+}
+
+.menuright {
+  float: right;
+}
+.pIndique {
+  text-align: center;
+}
+.modal {
+    height: 58% !important;
+}

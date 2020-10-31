@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  
+  <style> 
+    #error_message{
+      margin-bottom: 20px;
+      background: #E0E0E0;
+      padding: 0px;
+      text-align: center;
+      font-size: 14px;
+      transition: all 0.5s ease;
+    }
+    .card-content h5{
+      text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="row">
+      <nav>
+        <div class="nav-wrapper">
+            <a href="javascript:history.back()" class="back-btn"><i class="material-icons">reply</i></a>
+        </div>
+      </nav>
+
+      <div class="col s12 m6 offset-m3">
+        <div class="card">
+            <div class="card-content">
+              <h5>Contactar o Suporte</h2>
+                <div id="error_message">
+                </div>
+                <div class="form-field col s12">
+                    <input type="text" placeholder="Nome" id="nome">
+                </div><br>
+                <div class="form-field col s12">
+                    <input type="text" placeholder="Sobrenome" id="sobrenome">
+                </div><br>
+                <div class="form-field col s12">
+                    <input type="text" placeholder="Motivo"  id="motivo">
+                </div><br>
+                <div class="form-field col s12">
+                    <input type="text" placeholder="Seu e-mail" id="email">
+                </div><br>
+                <div class="form-field col s12">
+                  <textarea id="mensagem" placeholder="Mensagem" class="materialize-textarea"></textarea>
+                </div><br>
+                <div class="form-field">
+                    <button type="submit" class="btn-large waves-effect waves-dark" id="subCad">Cadastrar</button>
+                </div><br>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    var subCad = document.getElementById("subCad");
+    subCad.addEventListener("click", function(){
+      validate()
+    })
+
+    function validate(){
+      var name = document.getElementById("nome").value;
+      var lastName = document.getElementById("sobrenome").value;
+      var subject = document.getElementById("motivo").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("mensagem").value;
+      var error_message = document.getElementById("error_message");
+      
+      error_message.style.padding = "10px";
+
+      var text;
+      if(name == ""){
+        text = "Por favor, entre com um nome válido.";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if(lastName == ""){
+        text = "Por favor, entre com o seu sobrenome.";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if(subject == ""){
+        text = "Por favor, informe o motivo.";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if(email.indexOf("@") == -1 || email.length < 6){
+        text = "Por favor, informe o um e-mail válido.";
+        error_message.innerHTML = text;
+        return false;
+      }
+      if(message == ""){
+        text = "Escreva a sua mensagem.";
+        error_message.innerHTML = text;
+        return false;
+      }
+      alert("Mensagem enviada com sucesso!");
+      return true;
+      }
+
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/auto.js"></script>
+  </body>
+</html>

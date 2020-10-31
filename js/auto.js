@@ -1,4 +1,11 @@
 M.AutoInit();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    //var instances = M.Modal.init(elems, options);
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
         //defaultDate: new Date(1990,1,3),
@@ -22,7 +29,3 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.datepicker');
     var instance = M.Datepicker.init(elems, options);
 });
-
-$('.datepicker').pickadate({
-    labelMonthNext: 'P'
-})

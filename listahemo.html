@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postos e Unidades</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Css Pessoal -->
+    <link rel="stylesheet" href="css/listahemo.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="row">
+        <!-- Nav -->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="javascript:history.back()" class="back-btn"><i class="material-icons">reply</i></a>
+                <ul id="nav-mobile" class="right">   
+                    <li><input type="text" id="search-txt" placeholder="Digite o hemocentro"></li>                 
+                    <li><a href="#" class="back-btn" onclick="buscarHemo();"><i class="material-icons">search</i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="col s12 m6 offset-m3">
+            <div class="card">
+                <div class="card-content">
+                    <p>Hemocentros e Unidades</p>
+                    <select id="listaUF">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre (AC)</option>
+                        <option value="AL">Alagoas (AL)</option>
+                        <option value="AP">Amapá (AP)</option>
+                        <option value="AM">Amazonas (AM)</option>
+                        <option value="BA">Bahia (BA)</option>
+                        <option value="CE">Ceará (CE)</option>
+                        <option value="DF">Distrito Federal (DF)</option>
+                        <option value="ES">Espirito Santo (ES)</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <div id="cardInformacoes" class="card" style="display: none;">
+                        <div class="card-content">
+                            <center><p id="info"></p></center>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card" id="cardIndique" style="display: none;">
+                        <div class="card-content">
+                            <p class="pIndique">Você não achou o hemocentro ou unidade? <a class="modal-trigger" href="#modal1">Indique!</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Indicação de hemocentros</h4>
+                    <div class="form-field col s12">
+                        <label for="username">Nome do Hemocentro ou Unidade</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="form-field col s12">
+                        <label for="username">Endereço</label>
+                        <input type="text" id="endereco">
+                    </div>
+                    <div class="form-field col s12">
+                        <label for="username">Telefone</label>
+                        <input type="text" id="telefone">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="indHemocentro()">Cadastrar</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/auto.js"></script>
+    <script src="js/listahemo.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações Úteis</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+    .card-content h6{
+        text-align: center; 
+        text-decoration: underline; 
+        font-weight: bold;
+    }
+    #cont1, #cont2, #cont3, #cont4{
+        display: none;
+    }
+</style>
+<body>
+    <div class="row">
+        <nav>
+          <div class="nav-wrapper">
+              <a href="javascript:history.back()" class="back-btn"><i class="material-icons">reply</i></a>
+          </div>
+        </nav>
+        <div class="col s12 m6 offset-m3">
+            <div class="card">
+                <div class="card-content">
+                    <p><h6>Informações Uteis</h6></p>
+                    <h5 onclick="ativar1()">O que é o PD APP?</h5>
+                    <div id="cont1">
+                        Aplicativo tem a responsabilidade em contribuir com a 
+                        disseminação da doação de sangue através de campanhas independentes. 
+                        Além disso, o usuário tem acesso á informações pertinentes sobre o 
+                        ato de doação e a busca por vários hemocentros, núcleos e pontos de 
+                        coletas espalhados por todo o país.
+                    </div>
+                    <h5 onclick="ativar2()">Como funciona o PD APP?</h5>
+                    <div id="cont2">
+                        No aplicativo, o usuario poderá criar campanhas de doação de sangue, 
+                        para si próprio ou para outra pessoa. Permitindo compartilhar a campanha 
+                        em todas as redes socias e médias digitais.
+                    </div>
+                    <h5 onclick="ativar3()">Etapas da doação de Sangue</h5>
+                    <div id="cont3">
+                        <a href="http://www.hemocentro.fmrp.usp.br/canal-do-doador/etapas-da-doacao/" target="_blank">
+                            Etapa padrão da doação de Sangue (Cartilha do Hemocentro de Ribeirão Preto - SP).</a>
+                    </div>
+                    <h5 onclick="ativar4()">Doação Voluntária de Sangue</h5>
+                    <div id="cont4">
+                        <a href="http://bvsms.saude.gov.br/bvs/publicacoes/manual_orientacoes_promocao_doacao_voluntaria_sangue.pdf" target="_blank">
+                            Manual de Orientações para Promoção de Doação Voluntária de Sangue (Ministério da Saúde).</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function ativar1(){
+            if(document.getElementById("cont1").style.display != "block"){
+                document.getElementById("cont1").style.display = "block"
+            }else{
+                document.getElementById("cont1").style.display = "none"
+            }
+        }
+        function ativar2(){
+            if(document.getElementById("cont2").style.display != "block"){
+                document.getElementById("cont2").style.display = "block"
+            }else{
+                document.getElementById("cont2").style.display = "none"
+            }
+        }
+        function ativar3(){
+            if(document.getElementById("cont3").style.display != "block"){
+                document.getElementById("cont3").style.display = "block"
+            }else{
+                document.getElementById("cont3").style.display = "none"
+            }
+        }
+        function ativar4(){
+            if(document.getElementById("cont4").style.display != "block"){
+                document.getElementById("cont4").style.display = "block"
+            }else{
+                document.getElementById("cont4").style.display = "none"
+            }
+        }
+    </script>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/auto.js"></script>
+</body>
+</html>
