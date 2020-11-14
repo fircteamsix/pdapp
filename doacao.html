@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right">   
+                    <li><input class="tirarRegrasInput" type="text" id="search-txt"></li>                 
+                    <li><a href="#" class="back-btn" ><i class="material-icons">search</i></a></li>
+                </ul>
+                <ul class="right hide-on-med-and-down">
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <div class="user-view">
+            <div class="background">
+                <img src="img/logo2.png" alt="">
+            </div>
+        </div>
+        <li><div class="divider"></div></li>
+        <li><a href="perfil.html">Meu Perfil</a></li>
+        <li><a href="infouteis.html">Informações Úteis</a></li>
+        <li><a href="#">Perguntas e Respostas</a></li>
+        <li><a href="listahemo.html">Postos e Unidades</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#">Termo de Uso</a></li>
+        <li><a href="#">Politica de Privacidade</a></li>
+        <li><a href="suporte.html">Ajuda e Feedback</a></li>
+        <li><a href="infouteis.html">Sobre</a></li>
+        <li><a href="login.html">Sair</a></li>
+    </ul>
+
+      <!-- Tabelas -->
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#test1">Campanhas</a></li>
+                <li class="tab col s3"><a href="#test2">Doações</a></li>
+            </ul>
+        </div>
+        <div id="test1" class="col s12">
+            <!-- Conteudo de Campanhas -->
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">language</i>
+                    <span class="title">Campanha 1</span>
+                    <p>First Line<br>Second Line</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">language</i>
+                    <span class="title">Campanha 2</span>
+                    <p>First Line<br>Second Line</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">language</i>
+                    <span class="title">Campanha 3</span>
+                    <p>First Line<br>Second Line</p>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">language</i>
+                    <span class="title">Campanha 4</span>
+                    <p>First Line<br>Second Line</p>
+                </li>
+              </ul>
+              <!-- Botão Floating -->
+              <div class="fixed-action-btn">
+                <a id="btnCadCampanha" class="btn-floating btn-large btnAdd">
+                  <i class="large material-icons">add</i>
+                </a>
+              </div>
+
+        </div>
+        <div id="test2" class="col s12">
+            <!-- Conteudo de Doações -->
+            <ul class="collection">
+                <li class="collection-item meuitem">
+                    <i><svg  width="40" height="40" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m241 271v45h30v-45c0-8.291 6.709-15 15-15h45v-30h-45c-8.291 0-15-6.709-15-15v-45h-30v45c0 8.291-6.709 15-15 15h-45v30h45c8.291 0 15 6.709 15 15z"/><path d="m76 512h360c8.291 0 15-6.709 15-15v-452c0-8.291-6.709-15-15-15h-90v15c0 24.814-20.186 46-45 46h-90c-24.814 0-45-21.186-45-46v-15h-90c-8.291 0-15 6.709-15 15v452c0 8.291 6.709 15 15 15zm270-46h-120c-8.291 0-15-6.709-15-15s6.709-15 15-15h120c8.291 0 15 6.709 15 15s-6.709 15-15 15zm0-60h-120c-8.291 0-15-6.709-15-15s6.709-15 15-15h120c8.291 0 15 6.709 15 15s-6.709 15-15 15zm-195-195c0-8.291 6.709-15 15-15h45v-45c0-8.291 6.709-15 15-15h60c8.291 0 15 6.709 15 15v45h45c8.291 0 15 6.709 15 15v60c0 8.291-6.709 15-15 15h-45v45c0 8.291-6.709 15-15 15h-60c-8.291 0-15-6.709-15-15v-45h-45c-8.291 0-15-6.709-15-15zm15 164.998c8.284 0 15 6.716 15 15 0 8.286-6.716 15-15 15-8.286 0-15-6.714-15-15 0-8.284 6.714-15 15-15zm0 60c8.284 0 15 6.716 15 15 0 8.286-6.716 15-15 15-8.286 0-15-6.714-15-15 0-8.284 6.714-15 15-15z"/><path d="m211 60h90c8.284 0 15-6.716 15-15v-30c0-8.284-6.716-15-15-15h-90c-8.284 0-15 6.716-15 15v30c0 8.284 6.716 15 15 15z"/></svg>
+                    </i>
+                        <a href="registro_doacao.html">Registrar Doação</a>
+                </li>
+                <li class="collection-item meuitem">
+                    <i>
+                        <svg width="40" height="40" viewBox="-61 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m210 241h-30v60h-60v30h60v60h30v-60h60v-30h-60zm0 0"/><path d="m355.121094 204.6875c-5.007813-7.207031-10.589844-13.929688-15.90625-19.6875l-144.214844-185-143.628906 184.3125c-5.902344 6.445312-11.484375 13.167969-16.492188 20.375-22.824218 32.753906-34.878906 71.25-34.878906 111.3125 0 107.519531 87.480469 196 195 196s195-88.480469 195-196c0-40.0625-12.054688-78.558594-34.878906-111.3125zm-55.121094 156.3125h-60v60h-90v-60h-60v-90h60v-60h90v60h60zm0 0"/></svg>
+                    </i>
+                    <a href="ver_doacoes.html">Ver Doações</a>
+                </li>
+                <li class="collection-item meuitem">
+                    <i>
+                        <svg width="40" height="40" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m337.903 358.822 23.413-37.992 42.252-14.41 4.681-44.377 31.789-31.295-15.114-42.006 15.114-42.007-31.788-31.295-4.681-44.376-42.252-14.41-23.413-37.993-44.285 5.347-37.619-24.008-37.619 24.01-44.284-5.347-23.413 37.992-42.252 14.41-4.681 44.376-31.789 31.295 15.114 42.007-15.114 42.007 31.788 31.294 4.681 44.377 42.252 14.41 23.413 37.992 44.285-5.346 37.619 24.009 37.619-24.009zm-211.332-170.079c0-71.367 58.062-129.429 129.429-129.429s129.429 58.062 129.429 129.429-58.062 129.429-129.429 129.429-129.429-58.062-129.429-129.429z"/><path d="m256 89.333c-54.815 0-99.41 44.595-99.41 99.41s44.595 99.41 99.41 99.41 99.41-44.595 99.41-99.41-44.595-99.41-99.41-99.41z"/><path d="m211.299 384.568-52.68 6.36-27.833-45.167-9.462-3.226-40.813 127.566 73.475-4.041 57.485 45.94 33.828-105.732z"/><path d="m381.214 345.762-27.834 45.166-52.679-6.36-34 21.7 33.828 105.732 57.485-45.94 73.475 4.041-40.813-127.566z"/></svg>
+                    </i>
+                    <a href="recompensas.html">Recompensas</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/auto.js"></script>
+    <script src="js/doacao.js"></script>
+    <script>
+        verificarStatus()
+    </script>
+</body>
+</html>

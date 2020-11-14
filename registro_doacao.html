@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Doação</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  outline: nome;
+}
+
+h4{
+  font-size: 14px;
+  text-align: center
+}
+
+#custom-button{
+  padding: 10px;
+  color: white;
+  background-color: #2F80ED;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover{
+  background: #ABB2B9;
+}
+
+#custom-text{
+  margin-left: 10px;
+  font-family: sans-serif;
+  color: #aaa;
+}
+
+button{
+    border-style: none !important;
+}
+
+#checkIcon{
+  color: green;
+  margin-top: -62px;
+  margin-left: 15%;
+}
+
+#closeIcon{
+  color: red;
+  position: absolute;
+  margin-top: -62px; 
+  margin-left: 60%;
+}
+.center {
+  height: 520px;
+}
+</style>
+
+<body>
+<div class="row">
+    <div class="col s12 l4 offset-l4">
+        <div class="card">
+            <div class="card-content">
+                  <h4>Registro de doação</h4>
+                <div class="center">
+                  <input type="file" id="real-file" hidden="hidden"/>
+                  <button type="button" id="custom-button">Selecione o comprovante</button><br>
+                  <span id="custom-text">Nenhum arquivo selecionado, ainda.</span>
+                  <br>
+                  <br>
+                  <p class="left">Data da doação</p>
+                  <input type="text" class="datepicker" name=""><br><br>
+                  <p class="left">Data de término</p>
+                  <input type="text" class="datepicker" name=""><br><br>
+                  <p class="left">Local da doação</p>
+                  <input type="text" name=""><br><br>
+                  <!-- <div class="g-recaptcha" data-sitekey="6LdiEOAZAAAAAGCEBlYJqrHEAEXRVNSnyx5aJT2C"></div> -->
+                  <img src="https://developers.google.com/recaptcha/images/newCaptchaAnchor.gif" alt="Recap" class="responsive-img" width="320" height="105">
+                </div>
+                <div class="check">
+                  <a href="ver_doacoes.html"><i class="medium material-icons" id="checkIcon">check</i></a>
+                </div>
+                <div class="close">
+                  <a href="javascript:history.back()">
+                  <i class="medium material-icons" id="closeIcon">close</i>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const realFileBtn = document.getElementById("real-file");
+  const customBtn = document.getElementById("custom-button");
+  const customTxt = document.getElementById("custom-text");
+
+  customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+  });
+
+  realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+  customTxt.innerHTML = realFileBtn.value.match( /[\/\\]([\w\d\s\.\-\(\)]+)$/ )[1];
+  } else {
+    customTxt.innerHTML = "Nenhum arquivo selecionado, ainda.";
+  }
+});
+</script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/auto.js"></script><!-- Arquivo JS para inializar calendario do materialize -->
+</body>
+</html>

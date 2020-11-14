@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PDApp</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+<style>
+body{
+  transform: translate(0%, 40%);
+}
+
+#login-links{
+    text-align: center;
+}
+
+#warning{
+    text-align: center;
+    color: #aaa;
+}
+
+#login-links p{
+    padding-top: 0.2em;
+}
+.btn-large{
+    background-color: #2F80ED;
+    width: 100%;
+}
+
+.form-field button{
+    margin-top: 1em;
+}
+.card-content i{
+    position: absolute;
+    float: right;
+    margin: 0 -23px;
+    color: #aaa;
+    transition: 0.3s;
+}
+#email, #email, #senha{
+    border-radius: 2px !important;
+    box-shadow: .1px .1px 0.7px rgba(51,51,51,15) !important;
+}
+
+#ajust{
+    text-align: justify;
+}
+
+nav {
+    background-color: #ffffff !important;
+}
+
+i.material-icons {
+    color: #000;
+}
+.back-btn {
+    margin: 10px 10px !important;
+    color: #333333;
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+  }
+</style>
+
+</head>
+<body>
+  <div class="row">
+  <div class="col s12 m4 offset-m4">
+  <div class="card">
+  </div>
+  <div class="card-content">
+  <div class="form-field col s12">
+    <label for="username">Digite seu e-mail</label>
+    <input type="text" id="username">
+    <i class="material-icons">email</i>
+  </div><br>
+  <div class="form-field">
+    <button class="btn-large waves-effect waves-dark btnAzulPadrao" id="btnEntrar">Enviar</button>
+  </div><br>
+  <div class="form-field" id="warning">
+    <p>Será enviado, para o e-mail cadastrado, um link de renovação de acesso.</p>
+  </div>
+  <div class="form-field" id="login-links">
+    <p><a href="login.html">Voltar para a tela de <strong>LOGIN</strong>.</a></p>
+  </div><br>
+  </div>
+  </div>
+  </div>
+  </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/auto.js"></script>
+    <!-- JS do projeto -->
+    <script src="js/login.js"></script>
+</body>
+</html>

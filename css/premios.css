@@ -1,0 +1,14 @@
+.personDoacao ul li{
+    font-size: 40px !important;
+}
+.personDoacao ul li i{
+    font-size: 40px !important;
+    margin: 0 3rem !important;
+}
+.personDoacao ul li a{
+    font-size: 20px !important;
+    position: absolute !important;
+    margin: 0.8rem -1.5rem !important;
+    color: #333333 !important;
+    text-decoration: none !important;
+}

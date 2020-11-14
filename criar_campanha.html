@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html >
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Criar Campanhas </title>
+     <!--  link responsive -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="css/main.css">
+     
+  </head>
+
+ <style>
+  *{
+  margin: 0;
+  padding: 0;
+  outline: nome;
+ }
+
+ .corpo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(51,51,51,15);
+
+ .center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
+ }
+
+ h3{
+  font-size: 16px;
+  text-align: center
+ }
+ #btnSalvar{
+  position: absolute;
+  top: 85%;
+  left: 21%;
+  padding : 10px;
+  width: 15em;
+  color: white;
+  background-color: #2F80ED;
+  border-radius: 5px;
+  cursor: pointer;
+
+ }
+ nav{
+  left: 5px;
+  right: 15px;
+  position: relative;
+  background-color: #d3d3d3d3;
+  box-sizing: border-box;
+ }
+
+ </style>
+
+<body>
+  <div class="row">
+    <nav>
+    <div class="nav-wrapper">
+        <a href="javascript:history.back()" class="back-btn"><i class="material-icons">reply</i></a>
+    </div>
+  </nav>
+  <div class="col s12 m6 offset-m3">
+    <div class="card">
+      <div class="card-content">
+        <h3>Criar Campanhas </h3>
+        <div class="margin-left">
+      
+      
+        <br>
+        <p class="left">Data de Início?</p>
+        <input type="text" class="datepicker" id="dataInicio">
+        
+        <p class="left">Data de término?</p>
+        <input type="text" class="datepicker" id="dataTermino">
+        
+        <p>Hemocentro de Doação? </p>
+        <input type="text" id="nomeHemocentro"><br><br><br>
+      
+        <div class="switch">
+          <p>Para outra pessoa</p>
+          <label>
+            <input type="checkbox" id="myCheck" onclick="myFunction();">
+            <span class="lever"></span>
+          </label>
+        </div>
+      
+      <p id="text" style="display:none;">Nome completo?
+        <input type="text" id="nomeReceptor">
+        <br><br>Tipo sanguíneo?<br><br>
+          <label>
+              <input value="a+" name="group1" type="radio" checked />
+              <span>A+</span>
+          </label>
+          <label>
+              <input value="b+" name="group1" type="radio" />
+              <span>B+</span>
+          </label>
+          <label>
+              <input value="o+" name="group1" type="radio" />
+              <span>O+</span>
+          <label>
+              <input value="ab+" name="group1" type="radio" />
+              <span>AB+</span>
+          </label>
+              <br>
+          <label>
+              <input value="a-" name="group1" type="radio" />
+              <span>A-</span>
+          </label>
+          <label>
+              <input value="b-" name="group1" type="radio" />
+              <span>B-</span>
+          </label>
+          <label>
+              <input value="o-" name="group1" type="radio" />
+              <span>O-</span>
+          </label>
+          <label>
+              <input value="ab-" name="group1" type="radio" />
+              <span>AB-</span>
+          </label></p><br><br><br><br>
+      </p>
+      </div>
+      <button class="btnAzulPadrao" type="button" id="btnSalvar">Salvar</button><br><br>
+    </div>
+
+  </div>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/auto.js"></script>
+<script src="js/criarCampanha.js"></script>
+</body>
+</html>

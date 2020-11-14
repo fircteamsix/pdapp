@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     //var instances = M.Modal.init(elems, options);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    //var instances = M.FloatingActionButton.init(elems, options);
+}); 
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var options = {
@@ -29,3 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.datepicker');
     var instance = M.Datepicker.init(elems, options);
 });
+
+function verificarStatus(){
+    if(localStorage.getItem("status") === null){
+        window.location.href = "login.html";
+        alert("A pagina não pode ser acessada sem estar logado primeiro.")
+    }
+    
+}

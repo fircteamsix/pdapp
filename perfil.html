@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro - PDApp</title>
+    <title>Meu Perfil - PDApp</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
@@ -11,6 +11,33 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <div class="user-view">
+            <div class="background">
+                <img src="img/logo2.png" alt="">
+            </div>
+        </div>
+        <li><div class="divider"></div></li>
+        <li><a href="doacao.html">Tela Principal</a></li>
+        <li><a href="infouteis.html">Informações Úteis</a></li>
+        <li><a href="#">Perguntas e Respostas</a></li>
+        <li><a href="listahemo.html">Postos e Unidades</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#">Termo de Uso</a></li>
+        <li><a href="#">Politica de Privacidade</a></li>
+        <li><a href="suporte.html">Ajuda e Feedback</a></li>
+        <li><a href="infouteis.html">Sobre</a></li>
+        <li><a href="login.html">Sair</a></li>
+    </ul>
     <div class="row">
         <div class="col s12 m4 offset-m4">
             <div class="card">
@@ -98,7 +125,7 @@
                         <input type="password"  id="senha">
                     </div><br>
                     <div class="form-field">
-                        <button data-target="modal1" class="btn-large waves-effect waves-dark modal-trigger btnAzulPadrao" id="btnCadastrar">Cadastrar</button>
+                        <button data-target="modal1" class="btn-large waves-effect waves-dark modal-trigger btnAzulPadrao" id="btnCadastrar">Editar</button>
                     </div><br>
                 </div>
             </div>

@@ -5,8 +5,11 @@
     padding-top: 0.2em;
 }
 .btn-large{
-    background-color: #2F80ED;
+    background-color: #ED1C24;
     width: 100%;
+}
+.btnAzulPadrao{
+    background-color: #2F80ED;
 }
 .card-action{
     height: 210px;
@@ -53,4 +56,62 @@ i.material-icons {
     align-items: center;
     transition: 0.4s;
     text-decoration: none;
-  }
+}
+#test2 ul li {
+    font-size: 40px;
+}
+#test2 ul li a{
+    font-size: 20px;
+    position: absolute;
+    margin: 0.8rem -1.5rem;
+    color: #333333;
+}
+#test2 ul li i{
+    font-size: 40px;
+    margin: 0 3rem;
+}
+.meuitem{
+    border-bottom: none !important;
+    padding: 1.5rem !important;
+}
+.meuitem i{
+    color: #333333 !important;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+    color: #000;
+}
+.tabs .tab a{
+    color:#000;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: #ffffff !important;
+}
+.tabs .indicator{
+    background-color: #333333 !important;
+}
+.btnAdd{
+    background-color: #333333 !important;
+}
+.btnAdd i{
+    font-size: 40px;
+    color: #ffffff !important;
+}
+input{
+    border-radius: 2px !important;
+    box-shadow: .1px .1px 0.7px rgba(51,51,51,15) !important;
+}
+.sidenav .user-view{
+    padding: 165px 16px 0;
+}
+.sidenav .user-view img{
+    align-items: center;
+    height: 100%;
+}
+.divSeparador{
+    border-top: 1rem;
+}
+.tirarRegrasInput{
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border-bottom: none !important;
+}

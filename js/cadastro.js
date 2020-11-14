@@ -9,7 +9,20 @@ document.getElementById("btnCadastrar").addEventListener("click", function(){
     var resultadocad = document.getElementById("resultadocad")
     if(email != "" && senha != "" && nome != "" && nasc != "" && telefone != "" && uf != "" && cidade != ""){
         localStorage.setItem(document.getElementById("email").value, document.getElementById("senha").value)
+        localStorage.setItem("nome/"+email, nome)
         resultadocad.innerText = "Cadastro realizado com sucesso"
+
+        //Pecorrer os radios e gravar o que esta "marcado"
+        var radios = document.getElementsByName("group1")
+        for(var i=0; i < radios.length; i++){
+            if(radios[i].checked){
+                localStorage.setItem("tpSang", radios[i].value)
+            }
+        }
+        
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 5000);
     }else{
         resultadocad.innerText = "Deve ser preenchido todos os campos"
     }
