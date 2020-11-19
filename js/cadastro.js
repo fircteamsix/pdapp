@@ -6,17 +6,18 @@ document.getElementById("btnCadastrar").addEventListener("click", function(){
     var telefone = document.getElementById("telefone").value
     var uf = document.getElementById("uf").value
     var cidade = document.getElementById("cidade").value
-    var resultadocad = document.getElementById("resultadocad")
+
     if(email != "" && senha != "" && nome != "" && nasc != "" && telefone != "" && uf != "" && cidade != ""){
         localStorage.setItem(document.getElementById("email").value, document.getElementById("senha").value)
         localStorage.setItem("nome/"+email, nome)
-        resultadocad.innerText = "Cadastro realizado com sucesso"
+
+        M.toast({html: 'Cadastro realizado com sucesso'})
 
         //Pecorrer os radios e gravar o que esta "marcado"
         var radios = document.getElementsByName("group1")
         for(var i=0; i < radios.length; i++){
             if(radios[i].checked){
-                localStorage.setItem("tpSang", radios[i].value)
+                localStorage.setItem("tpSang/"+email, radios[i].value)
             }
         }
         
@@ -24,7 +25,7 @@ document.getElementById("btnCadastrar").addEventListener("click", function(){
             window.location.href = "login.html";
         }, 5000);
     }else{
-        resultadocad.innerText = "Deve ser preenchido todos os campos"
+        M.toast({html: 'Deve ser preenchido todos os campos!'})
     }
     
 })
