@@ -27,11 +27,6 @@
     margin-top: -65px;
 }
 
-.delete-button{
-  margin-top: 0px;
-
-}
-
 .share-button{
   width: 280px;
   height: 80px;
@@ -113,71 +108,83 @@
   cursor: pointer;
   transition: .3s linear;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-  /*text-align: center;*/
 }
 
 .delBut{
   color: #000;
 }
 
+@media only screen and (max-width:  600px) {
+  .delete-button{
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .delete-button{
+    margin-left: 35%;
+  }
+  .share-button{
+    margin-left: 20%;
+  }
+}
+
+
+
 </style>
 </head>
 
 <body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="criar_campanha.html" class="back-btn"><i class="material-icons">edit</i></a>
+        <a href="doacao.html" class="back-btn right"><i class="material-icons">home</i></a>
+      </div>
+    </nav>
+  </div>
+
     <div class="row">
-        <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="criar_campanha.html" class="back-btn"><i class="material-icons">edit</i></a>
-                <a href="doacao.html" class="back-btn right"><i class="material-icons">home</i></a>
-            </div>
-        </nav>
-    </div>
-        <div class="col s12 m4 offset-m4">
-            <div class="card">
-                <div class="card-image">
-                  <img type="file" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png">
-                </div>
-                <div class="card-content">
-                    <div class="center">
-                    <a class="waves-effect waves-light btn bntUpload">&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons left iconCam">camera_alt</i>carregar</a>
-                    </div><br>
-                    <div id="info">
-                        <p id="nomeCamp"><strong>Nome</strong></p>
-                        <p id="nomeReceptor"></p><br>
-                        
-                        <p id="dataIn"><strong>Data inicial da campanha</strong></p>
-                        <p id="dataInicio"></p><br>
-
-                        <p id="dataF"><strong>Data final da campanha</strong></p>
-                        <p id="dataFim"></p><br>
-
-                        <p id="tipoSangue"><strong>Tipo Sanguíneo</strong></p>
-                        <p id=""></p><br>
-
-                        <p id="hemoc"><strong>Hemocentro</strong></p>
-                        <p id="nomeHemocentro"></p><br>
-                      </div>
-                </div>
-              </div>
-
-              <div class="share-button">
-                <span><i class="fas fa-share-alt"></i> COMPARTILHE!</span>
-                <a href="#"><i class="fas fa-link"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-              </div><br>
-
-              <div class="delete-button">
-                <span><i class="fas fa-trash delBut"></i> DELETAR!</span>
-                <a href="#"></a>
-              </div>
-              
+      <div class="col s12 m4 offset-m4 xl4 offset-xl4">
+        <div class="card">
+          <div class="card-image">
+            <img type="file" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png">
+          </div>
+          <div class="card-content">
+            <div class="center">
+              <a class="waves-effect waves-light btn bntUpload">&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons left iconCam">camera_alt</i>carregar</a>
+            </div><br>
+            <div id="info">
+              <p id="nomeCamp"><strong>Nome</strong></p>
+              <p id="nomeReceptor"></p><br>  
+              <p id="dataIn"><strong>Data inicial da campanha</strong></p>
+              <p id="dataInicio"></p><br>
+              <p id="dataF"><strong>Data final da campanha</strong></p>
+              <p id="dataFim"></p><br>
+              <p id="tipoSangue"><strong>Tipo Sanguíneo</strong></p>
+              <p id=""></p><br>
+              <p id="hemoc"><strong>Hemocentro</strong></p>
+              <p id="nomeHemocentro"></p><br>
             </div>
           </div>
-    
+        </div>
+      </div>
+      <div class="col s6 offset-s1 m4 l2 offset-l4 offset-m4 xl4 offset-xl4">
+        <div class="share-button">
+          <span><i class="fas fa-share-alt"></i> COMPARTILHE!</span>
+          <a href="#"><i class="fas fa-link"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div><br>
+        <div class="delete-button">
+          <span><i class="fas fa-trash delBut"></i> DELETAR!</span>
+          <a href="#"></a>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
