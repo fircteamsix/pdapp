@@ -3,12 +3,6 @@ verificarStatus();//Função para verificar se esta logado.
 var btnSalvar = document.getElementById("btnSalvar");
 var arrayCampanhas = [];
 
-var arrayTemp = localStorage["arrayCampanhas"];
-
-for(var i in arrayTemp.length){
-  console.log(arrayTemp[i])
-}
-
 //Evennto do botão salvar
 btnSalvar.addEventListener("click", function(){
   var dataInicio = document.getElementById("dataInicio").value;
@@ -27,7 +21,7 @@ btnSalvar.addEventListener("click", function(){
 
   for(var i=0; i < radioTbSang.length; i++){
       if(radioTbSang[i].checked){
-        //radioTbSang[i].value
+        localStorage.setItem("tpSangue/",radioTbSang[i].value)
       }
   }
   window.location.href = "tela_de_campanha.html";
