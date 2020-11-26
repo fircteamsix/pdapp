@@ -1,4 +1,22 @@
+verificarStatus();//Função para verificar se esta logado.
+
 var btnSalvar = document.getElementById("btnSalvar");
+var arrayCampanhas = [];
+
+var arrayTemp = localStorage["arrayCampanhas"];
+
+for(var i in arrayTemp.length){
+  console.log(arrayTemp[i])
+}
+
+//Pecorre se existir o "arrayCampanhas" no LocalStorage e preenche o arrayCampannhas desse js.
+// if(localStorage["arrayCampanhas"] != null){
+//   var arrayTemp = JSON.parse(localStorage["arrayCampanhas"]);
+//   for(var i in arrayTemp){
+//     arrayCampanhas.push(arrayTemp[i]);
+//   }
+//   var arrayCampanhas = [localStorage.getItem("arrayCampanhas")];
+// }
 
 //Evennto do botão salvar
 btnSalvar.addEventListener("click", function(){
@@ -9,20 +27,18 @@ btnSalvar.addEventListener("click", function(){
   if(document.getElementById("myCheck").checked){
     var nomeReceptor = document.getElementById("nomeReceptor").value;
   }else{
-    var nomeReceptor = "Nome Logado Teste";//Mudar para o real nome
+    var emailLogado = localStorage.getItem("logadoCom");
+    var nomeReceptor = localStorage.getItem("nome/"+emailLogado);
   }
-
-  localStorage.setItem("dataInicioDocao", dataInicio);
-  localStorage.setItem("dataFimDocao", dataFim);
-  localStorage.setItem("nomeHemocentro", nomeHemocentro);
-  localStorage.setItem("nomeReceptor", nomeReceptor);
-
+  
   //Pecorrer "RadioButtons"
-  var radioTbSang = document.getElementsByName("group1")
+  var radioTbSang = document.getElementsByName("group1");
 
   for(var i=0; i < radioTbSang.length; i++){
       if(radioTbSang[i].checked){
-          localStorage.setItem("tpSang/"+nomeReceptor, radioTbSang[i].value)
+        arrayCampanhas.push({"dataInicio": dataInicio,"dataFim": dataFim,"nomeHemocentro": nomeHemocentro,
+                            "nomeHemocentro": nomeReceptor,"radioTbSang": radioTbSang[i].value});// Adcionando itens ao Array
+        localStorage["arrayCampanhas"] = arrayCampanhas; //Salvando o Array de "Campanhas"
       }
   }
   window.location.href = "tela_de_campanha.html";
