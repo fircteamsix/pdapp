@@ -9,15 +9,6 @@ for(var i in arrayTemp.length){
   console.log(arrayTemp[i])
 }
 
-//Pecorre se existir o "arrayCampanhas" no LocalStorage e preenche o arrayCampannhas desse js.
-// if(localStorage["arrayCampanhas"] != null){
-//   var arrayTemp = JSON.parse(localStorage["arrayCampanhas"]);
-//   for(var i in arrayTemp){
-//     arrayCampanhas.push(arrayTemp[i]);
-//   }
-//   var arrayCampanhas = [localStorage.getItem("arrayCampanhas")];
-// }
-
 //Evennto do botão salvar
 btnSalvar.addEventListener("click", function(){
   var dataInicio = document.getElementById("dataInicio").value;
@@ -36,9 +27,7 @@ btnSalvar.addEventListener("click", function(){
 
   for(var i=0; i < radioTbSang.length; i++){
       if(radioTbSang[i].checked){
-        arrayCampanhas.push({"dataInicio": dataInicio,"dataFim": dataFim,"nomeHemocentro": nomeHemocentro,
-                            "nomeHemocentro": nomeReceptor,"radioTbSang": radioTbSang[i].value});// Adcionando itens ao Array
-        localStorage["arrayCampanhas"] = arrayCampanhas; //Salvando o Array de "Campanhas"
+        //radioTbSang[i].value
       }
   }
   window.location.href = "tela_de_campanha.html";
