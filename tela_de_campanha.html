@@ -1,252 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Minha Campanha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/614b4e4cf6.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartilhar campanha</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+
 
 <style>
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+.iconCam{
+  color: white !important;
 }
 
-body{
-  height: 100vh;
-  width: 100%;
+.homeButton{
+  margin-top: -65px;
 }
 
-.profile-pic-div{
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  top: 28%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 15%;
-  overflow: hidden;
-  border: 1px solid grey;
-  background: white;
+.form-input{
+  background:#fff;
 }
 
-#photo{
-  height: 100%;
-  width: 100%;
-}
-
-#file{
+.form-input input{
   display: none;
 }
 
-#uploadBtn{
+.form-input label{
+  display: block;
+  /*width: 120px;*/
   height: 40px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgba(51, 51, 51, 0.7);
-  color: white;
-  line-height: 30px;
-  font-size: 15px;
+  line-height:42px;
+  text-align:center;
+  background:#2F80ED;
+  color:#fff;
+  font-size: 14px;
+  border-radius: 5px;
   cursor: pointer;
+  font-family: 'Roboto';
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
-.center {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,100%);
-}
-.share-menu {
-  position:relative;
-  width:220px;
-  height:120px;
-}
-.share-menu .share-btn {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:80px;
-  height:80px;
-  background:#00acee;
-  color:#f5f5f5;
-  font-size:30px;
-  text-align:center;
-  line-height:80px;
-  border-radius:50%;
-  cursor:pointer;
-  z-index:2;
-}
-.share-menu i.fa-close {
-  display:none;
-}
-.share-menu.active i.fa-share-alt {
-  display:none;
-}
-.share-menu.active i.fa-close {
-  display:inline;
-}
-.share-menu .social-btn {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:75px;
-  height:75px;
-  background:#eee8e8;
-  color:#222;
-  border-radius:50%;
-  cursor:pointer;
-  text-align:center;
-  line-height:75px;
-  font-size:30px;
-  transition:all 300ms ease-in-out 0ms;
-}
-.share-menu.active div:nth-child(2){
-  top:-25%;
-  left:50%;
-  transform:translate(-50%,-100%);
-  transition:all 300ms ease-in-out 0ms;
-}
-.share-menu.active div:nth-child(3){
-  top:0%;
-  left:100%;
-  transform:translate(-50%,-50%);
-  transition:all 300ms ease-in-out 80ms;
-}
-.share-menu.active div:nth-child(4){
-  top:100%;
-  left:100%;
-  transform:translate(-50%,-50%);
-  transition:all 300ms ease-in-out 160ms;
-}
-.share-menu.active div:nth-child(5){
-  top:125%;
-  left:50%;
-  transform:translate(-50%,0%);
-  transition:all 300ms ease-in-out 240ms;
-}
-.share-menu.active div:nth-child(6){
-  top:100%;
-  left:0%;
-  transform:translate(-50%,-50%);
-  transition:all 300ms ease-in-out 320ms;
-}
-.share-menu.active div:nth-child(7){
-  top:0%;
-  left:0%;
-  transform:translate(-50%,-50%);
-  transition:all 300ms ease-in-out 400ms;
+.form-input img{
+  width: 100%;
+  display: none;
 }
 
-/*TUTORIAL https://www.youtube.com/watch?v=AltqAPZzAqo&ab_channel=Origamid*/
-@media (min-width: 600px; max-width: 800px) {
+#messageThks{
+  font-family:'Caveat';
+  font-size: 20px;
+}
 
-.profile-pic-div, #photo, .share-menu, .share-btn {
-  width: 100%
+.share-button{
+  width: 190px;
+  height: 60px;
+  background: #F5F5F5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto';
+}
+
+.share-button:hover{
+  transform: scale(1.1);
+}
+
+.share-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2F80ED;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 5px;
+}
+
+.share-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+
+.share-button a{
+  flex: 1;
+  font-size: 26px;
+  color: #2d3436;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.share-button:hover a{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.share-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+
+.share-button a:nth-of-type(2){
+  transition-delay: 0.8s;
+}
+
+.share-button a:nth-of-type(3){
+  transition-delay: 0.6s;
+}
+
+.share-button a:nth-of-type(4){
+  transition-delay: 0.4s;
+}
+
+.delete-button{
+  /*width: 120px;*/
+  height: 40px;
+  background: red;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto';
+}
+
+#spanDel{
+  color: white;
+}
+
+/*@media only screen and (max-width:  600px) {
+  .delete-button{
+    margin-left: 45%;
   }
+}*/
 
+@media only screen and (min-width: 1200px) {
+  .delete-button{
+    margin-left: 35%;
+  }
+  .share-button{
+    margin-left: 20%;
+  }
 }
 
 </style>
 </head>
 
 <body>
-<div class="wrapper">
-  <div class="profile-pic-div">
-    <img src="" id="photo">
-    <input type="file" id="file">
-    <label for="file" id="uploadBtn">Escolha sua foto</label>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="criar_campanha.html" class="back-btn"><i class="material-icons">edit</i></a>
+        <a href="doacao.html" class="back-btn right"><i class="material-icons">home</i></a>
+      </div>
+    </nav>
   </div>
-  <p>Nome: </p>
-  <p id="nomeReceptor"></p>
-  <br>
-  <p>Data Inicio: </p>
-  <p id="dataInicio"></p>
-  <br>
-  <p>Data Fim: </p>
-  <p id="dataFim"></p>
-  <br>
-  <p>Hemocentro: </p>
-  <p id="nomeHemocentro"></p>
-</div>
 
-<div class="center">
-  <div class="share-menu">
-    <div class="share-btn" onclick="toggleShareMenu()">
-      <i class="fa fa-share-alt"></i>
-      <i class="fa fa-close"></i>
+    <div class="row">
+      <div class="col s12 m4 offset-m4 xl4 offset-xl4">
+        <div class="card">
+          <div class="card-content">
+            <div class="center">
+              <div class="form-input">
+                <div class="preview">
+                  <img id="file-ip-1-preview">
+                </div>
+              </div>
+            </div><br>
+            <div id="info">
+              <p id="nomeCamp"><strong>Nome</strong></p>
+              <p id="nomeReceptor"></p><br>  
+              <p id="dataIn"><strong>Data inicial da campanha</strong></p>
+              <p id="dataInicio"></p><br>
+              <p id="dataF"><strong>Data final da campanha</strong></p>
+              <p id="dataFim"></p><br>
+              <p id="tipoSangue"><strong>Tipo Sanguíneo</strong></p>
+              <p id=""></p><br>
+              <p id="hemoc"><strong>Hospital/Centro Médico</strong></p>
+              <p id="nomeHemocentro"></p><br>
+              <p id="localDoacao"><strong>Cidade e estado do Hospital/Centro Médico</strong></p>
+              <p id=""></p><br><br>
+            </div>
+            <div id="messageThks">
+              <p>"Procure o hemocentro ou unidade de coleta mais próximo para fazer a doação.
+                E muito obrigado(a), de coração, pela sua atitude em ajudar!"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 offset-s1 m4 l4 offset-l4 offset-m4 xl4 offset-xl4">
+
+        <div class="share-button">
+          <span>Compartilhar</span>
+            <a href="#"><i class="fas fa-link"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div><br>
+
+        <div class="form-input">
+          <label for="file-ip-1">Imagem</label>
+            <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+        </div>
+
+        <div class="delete-button">
+          <span id="spanDel">Deletar</span>
+            <a href="#"></a>
+        </div>
+      </div>
     </div>
-    <div class="social-btn">
-      <i class="fa fa-facebook"></i>
-    </div>
-    <div class="social-btn">
-      <i class="fa fa-twitter"></i>
-    </div>
-    <div class="social-btn">
-      <i class="fa fa-instagram"></i>
-    </div>
-    <div class="social-btn">
-      <i class="fa fa-whatsapp"></i>
-    </div>
-    <div class="social-btn">
-      <i class="fa fa-telegram"></i>
-    </div>
-    <div class="social-btn">
-      <i class="fa fa-link"></i>
-    </div>
-  </div>
-</div>
 
-<script>
-const imgDiv = document.querySelector('.profile-pic-div');
-const img = document.querySelector('#photo');
-const file = document.querySelector('#file');
-const uploadBtn = document.querySelector('#uploadBtn');
 
-//Obter Itens do Storeg
-var nomeReceptor = document.getElementById("nomeReceptor");
-var dataInicio = document.getElementById("dataInicio");
-var dataFim = document.getElementById("dataFim");
-var nomeHemocentro = document.getElementById("nomeHemocentro");
+    <script>
+      function showPreview(event){
+        if(event.target.files.length > 0){
+        var src = URL.createObjectURL(event.target.files[0]);
+        var preview = document.getElementById("file-ip-1-preview");
+        preview.src = src;
+        preview.style.display = "block";
+      }
+    }
+    </script>
 
-nomeReceptor.innerText = localStorage.getItem("nomeReceptor");
-dataInicio.innerText = localStorage.getItem("dataInicioDocao");
-dataFim.innerText = localStorage.getItem("dataFimDocao");
-nomeHemocentro.innerText = localStorage.getItem("nomeHemocentro");
-
-////////
-
-imgDiv.addEventListener('mouseenter', function(){
-uploadBtn.style.display = "block"; });
-imgDiv.addEventListener('mouseleave', function(){
-uploadBtn.style.display = "none"; });
-
-file.addEventListener('change', function(){
-  const choosedFile = this.files[0];
-  if (choosedFile) {
-  const reader = new FileReader(); 
-  reader.addEventListener('load', function(){
-  img.setAttribute('src', reader.result);});
-  reader.readAsDataURL(choosedFile);
-  }
-});
-
-function toggleShareMenu(){
-  document.getElementsByClassName("share-menu")[0].classList.toggle("active");
-}
-
-</script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
-
-<!-- DEVER� SER INSERIDA AS INFORMA��ES QUE FORAM PASSADAS PELO USU�RIO NA TELA DE 'CADASTRO DE CAMPANHA'. INFORMA��ES COMO: NOME, TELEFONE, TIPO SANGU�NEO, ETC., FICAR�O CENTRALIZADAS E ABAIXO DA FOTO -->
