@@ -30,6 +30,7 @@
   padding: 25px;
   border-radius: 5px;
   box-shadow: 4px 4px 10px rgba(51,51,51,15);
+ }
 
  .center{
   margin: 0;
@@ -39,12 +40,17 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   }
- }
 
  h3{
   font-size: 16px;
-  text-align: center
+  text-align: center;
  }
+
+ #mensagem{
+  font-size: 14px;
+  text-align: center;
+ }
+
  #btnSalvar{
   position: absolute;
   top: 85%;
@@ -55,8 +61,8 @@
   background-color: #2F80ED;
   border-radius: 5px;
   cursor: pointer;
-
  }
+
  nav{
   left: 5px;
   right: 15px;
@@ -77,63 +83,66 @@
   <div class="col s12 m6 offset-m3">
     <div class="card">
       <div class="card-content">
-        <h3>Criar Campanhas </h3>
-        <div class="margin-left">
+        <h3>Criar Campanha de Doação</h3>
+        <p class="left" id="mensagem"><strong>"Em caso de doação voluntária (sem destinatário específico para a sua doação), procurar um hemocentro ou unidade de coleta mais próximo de você!"</strong></p><br>
+        <div class="margin-left"><br>
       
       
         <br>
-        <p class="left">Data de Início?</p>
+        <p class="left"><br>Título da campanha</p>
+        <input type="text" id="nomeCampanha">
+
+        <p class="left">Data de início da campanha</p>
         <input type="text" class="datepicker" id="dataInicio">
         
-        <p class="left">Data de término?</p>
+        <p class="left">Data de término da campanha</p>
         <input type="text" class="datepicker" id="dataTermino">
         
-        <p>Hospital/Centro Médico:</p>
+        <p>Hospital ou Centro Médico para direcionar a doação:</p>
         <input type="text" id="nomeHemocentro"><br><br><br>
       
         <div class="switch">
-          <p>Para outra pessoa</p>
+          <p>Doação Específica</p>
           <label>
             <input type="checkbox" id="myCheck" onclick="myFunction();">
             <span class="lever"></span>
           </label>
-        </div>
+        </div><br>
       
-      <p id="text" style="display:none;">Nome completo?
+      <p id="text" style="display:none;">Nome da pessoa necessitada
         <input type="text" id="nomeReceptor">
-        <br><br>Tipo sanguíneo?<br><br>
+        
+        <br><br>Tipo sanguíneo?<br>
           <label>
               <input value="a+" name="group1" type="radio" checked />
-              <span>A+</span>
+              <span>A</span>
+          </label>
+          <label>
+            <input value="ab+" name="group1" type="radio" />
+            <span>AB</span>
           </label>
           <label>
               <input value="b+" name="group1" type="radio" />
-              <span>B+</span>
+              <span>B</span>
           </label>
           <label>
               <input value="o+" name="group1" type="radio" />
-              <span>O+</span>
+              <span>O</span>
+          </label><br><br>
+          
+        
+          <br>Fator RH<br>
           <label>
-              <input value="ab+" name="group1" type="radio" />
-              <span>AB+</span>
+            <input value="+" name="group2" type="radio" />
+            <span>+ Positivo</span>
           </label>
-              <br>
+          <br>
           <label>
-              <input value="a-" name="group1" type="radio" />
-              <span>A-</span>
-          </label>
-          <label>
-              <input value="b-" name="group1" type="radio" />
-              <span>B-</span>
-          </label>
-          <label>
-              <input value="o-" name="group1" type="radio" />
-              <span>O-</span>
-          </label>
-          <label>
-              <input value="ab-" name="group1" type="radio" />
-              <span>AB-</span>
-          </label></p><br><br><br><br>
+            <input value="-" name="group2" type="radio" />
+            <span>- Negativo</span><br><br>
+          </label><br>
+
+          </p><br><br><br><br>
       </p>
       </div>
       <button class="btnAzulPadrao" type="button" id="btnSalvar">Salvar</button><br><br>

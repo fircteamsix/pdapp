@@ -6,20 +6,16 @@
     <title>Compartilhar campanha</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet">
-<<<<<<< HEAD
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
-=======
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 
 <style>
-
 .iconCam{
-<<<<<<< HEAD
   color: white !important;
 }
 
@@ -27,18 +23,114 @@
   margin-top: -65px;
 }
 
+.card-content{
+  background-image: linear-gradient(to right top, #f1ffea, #eefff2, #effff9, #f3fffd, #f8ffff);
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#messageThks{
+  font-family:'Caveat';
+  font-size: 20px;
+}
+
+/*SOCIAL BUTTON*/
+#socialButtons{
+  padding: 0;
+  margin: 0;
+  min-height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fac, #twi, #insta, #whats, #teleg{
+  text-decoration: none;
+  color: #fff;
+}
+
+.fa{
+  font-size: 20px;
+  margin: 5px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.fa-facebook{
+  background-color: #3b5999;
+}
+.fa-facebook:hover{
+  color: #3b5999;
+}
+
+.fa-twitter{
+  background-color: #55acee;
+}
+.fa-twitter:hover{
+  color: #55acee;
+}
+
+.fa-instagram{
+  background-color: #e4405f;
+}
+.fa-instagram:hover{
+  color: #e4405f;
+}
+
+.fa-whatsapp{
+  background-color: #25D366;
+}
+.fa-whatsapp:hover{
+  color: #25D366;
+}
+
+.fa-telegram{
+  background-color: #0088cc;
+}
+.fa-telegram:hover{
+  color: #0088cc;
+}
+
+.fa:hover{
+  background-color: #fff;
+}
+
+/*SOCIAL BUTTON*/
+.form-input, .delete-button-image, .delete-button{
+  display: flex;
+  margin:5px;
+  width: 40%;
+  margin-left:100px;
+  margin-right:100px;
+}
+
+/*IMAGE UPLOAD BUTTON*/
+#file-ip-1-preview{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1px;
+  width: 200px;
+}
+
 .form-input{
   background:#fff;
 }
-
 .form-input input{
   display: none;
 }
-
 .form-input label{
   display: block;
-  /*width: 120px;*/
-  height: 40px;
+  height:40px;
+  width:125px;
   line-height:42px;
   text-align:center;
   background:#2F80ED;
@@ -49,39 +141,16 @@
   font-family: 'Roboto';
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-
 .form-input img{
   width: 100%;
   display: none;
 }
 
-#messageThks{
-  font-family:'Caveat';
-  font-size: 20px;
-}
-
-.share-button{
-  width: 190px;
-  height: 60px;
-=======
-    color: white !important;
-}
-
-.bntUpload{
-    width: 10rem !important;
-    text-align: center;
-    background-color: #2F80ED;
-}
-
-.homeButton{
-    margin-top: -65px;
-}
-
-.share-button{
-  width: 280px;
-  height: 80px;
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
-  background: #F5F5F5;
+/*IMAGE DELETE BUTTON*/
+.delete-button-image{
+  height: 40px;
+  width:125px;
+  background: #FF0000;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -89,81 +158,18 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  transition: .3s linear;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
   font-family: 'Roboto';
-=======
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
 }
-
-.share-button:hover{
-  transform: scale(1.1);
-}
-
-.share-button span{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #2F80ED;
+#spanDel2{
   color: white;
-  text-align: center;
-<<<<<<< HEAD
-  line-height: 60px;
-=======
-  line-height: 80px;
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
-  z-index: 999;
-  transition: .6s linear;
-  border-radius: 5px;
 }
 
-.share-button:hover span{
-  transform: translateX(-100%);
-  transition-delay: .3s;
-}
-
-.share-button a{
-  flex: 1;
-  font-size: 26px;
-  color: #2d3436;
-  text-align: center;
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: 0.3s linear;
-}
-
-.share-button:hover a{
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.share-button a:nth-of-type(1){
-  transition-delay: 1s;
-}
-
-.share-button a:nth-of-type(2){
-  transition-delay: 0.8s;
-}
-
-.share-button a:nth-of-type(3){
-  transition-delay: 0.6s;
-}
-
-.share-button a:nth-of-type(4){
-  transition-delay: 0.4s;
-}
-
+/*CAMPAING DELETE BUTTON*/
 .delete-button{
-<<<<<<< HEAD
-  /*width: 120px;*/
   height: 40px;
-  background: red;
-=======
-  width: 120px;
-  height: 40px;
-  background: #F5F5F5;
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
+  width:125px;
+  background: #333333;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -171,46 +177,12 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-<<<<<<< HEAD
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 }
-
 #spanDel{
   color: white;
 }
-
-/*@media only screen and (max-width:  600px) {
-  .delete-button{
-    margin-left: 45%;
-  }
-}*/
-=======
-  transition: .3s linear;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.delBut{
-  color: #000;
-}
-
-@media only screen and (max-width:  600px) {
-  .delete-button{
-    margin-left: 50%;
-  }
-}
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
-
-@media only screen and (min-width: 1200px) {
-  .delete-button{
-    margin-left: 35%;
-  }
-  .share-button{
-    margin-left: 20%;
-  }
-}
-
-
 
 </style>
 </head>
@@ -224,19 +196,20 @@
       </div>
     </nav>
   </div>
-<<<<<<< HEAD
 
     <div class="row">
       <div class="col s12 m4 offset-m4 xl4 offset-xl4">
         <div class="card">
           <div class="card-content">
+            
             <div class="center">
-              <div class="form-input">
-                <div class="preview">
-                  <img id="file-ip-1-preview">
-                </div>
-              </div>
+              <div class="form-input"></div>
+            </div>
+            <div class="preview">
+              <img id="file-ip-1-preview">
             </div><br>
+
+            <header><h3>Doação de Sangue</h3></header>
             <div id="info">
               <p id="nomeCamp"><strong>Nome</strong></p>
               <p id="nomeReceptor"></p><br>  
@@ -258,29 +231,33 @@
           </div>
         </div>
       </div>
-      <div class="col s6 offset-s1 m4 l4 offset-l4 offset-m4 xl4 offset-xl4">
 
-        <div class="share-button">
-          <span>Compartilhar</span>
-            <a href="#"><i class="fas fa-link"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div><br>
+      <div class="col s12 m4 offset-m4 xl4 offset-xl4">
+        <!--SOCIAL BUTTONS-->
+        <div id="socialButtons">
+          <a href="#" id="fac"><i class="fa fa-facebook"></i></a>
+          <a href="#" id="twi"><i class="fa fa-twitter"></i></a>
+          <a href="#" id="insta"><i class="fa fa-instagram"></i></a>
+          <a href="#" id="whats"><i class="fa fa-whatsapp"></i></a>
+          <a href="#" id="teleg"><i class="fa fa-telegram"></i></a>
+        </div>
 
         <div class="form-input">
-          <label for="file-ip-1">Imagem</label>
+          <label for="file-ip-1">Carregar Imagem</label>
             <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
         </div>
 
+        <div class="delete-button-image">
+          <span id="spanDel2">Deletar Imagem</span>
+            <a href="#"></a>
+        </div>
+
         <div class="delete-button">
-          <span id="spanDel">Deletar</span>
+          <span id="spanDel">Deletar Campanha</span>
             <a href="#"></a>
         </div>
       </div>
     </div>
-
 
     <script>
       function showPreview(event){
@@ -292,49 +269,6 @@
       }
     }
     </script>
-=======
-
-    <div class="row">
-      <div class="col s12 m4 offset-m4 xl4 offset-xl4">
-        <div class="card">
-          <div class="card-image">
-            <img type="file" src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png">
-          </div>
-          <div class="card-content">
-            <div class="center">
-              <a class="waves-effect waves-light btn bntUpload">&nbsp;&nbsp;&nbsp;&nbsp;<i class="material-icons left iconCam">camera_alt</i>carregar</a>
-            </div><br>
-            <div id="info">
-              <p id="nomeCamp"><strong>Nome</strong></p>
-              <p id="nomeReceptor"></p><br>  
-              <p id="dataIn"><strong>Data inicial da campanha</strong></p>
-              <p id="dataInicio"></p><br>
-              <p id="dataF"><strong>Data final da campanha</strong></p>
-              <p id="dataFim"></p><br>
-              <p id="tipoSangue"><strong>Tipo Sanguíneo</strong></p>
-              <p id=""></p><br>
-              <p id="hemoc"><strong>Hemocentro</strong></p>
-              <p id="nomeHemocentro"></p><br>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col s6 offset-s1 m4 l2 offset-l4 offset-m4 xl4 offset-xl4">
-        <div class="share-button">
-          <span><i class="fas fa-share-alt"></i> COMPARTILHE!</span>
-          <a href="#"><i class="fas fa-link"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div><br>
-        <div class="delete-button">
-          <span><i class="fas fa-trash delBut"></i> DELETAR!</span>
-          <a href="#"></a>
-        </div>
-      </div>
-    </div>
->>>>>>> ea323c7ec3f5f3a3d5a1844ffe139fe97cd33c33
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
