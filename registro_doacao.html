@@ -79,16 +79,16 @@ button{
                   <br>
                   <br>
                   <p class="left">Data da doação</p>
-                  <input type="text" class="datepicker" name=""><br><br>
+                  <input id="dataInicial" type="text" class="datepicker" name=""><br><br>
                   <p class="left">Data de término</p>
-                  <input type="text" class="datepicker" name=""><br><br>
+                  <input id="dataFinal" type="text" class="datepicker" name=""><br><br>
                   <p class="left">Local da doação</p>
-                  <input type="text" name=""><br><br>
+                  <input id="local" type="text" name=""><br><br>
                   <!-- <div class="g-recaptcha" data-sitekey="6LdiEOAZAAAAAGCEBlYJqrHEAEXRVNSnyx5aJT2C"></div> -->
                   <img src="https://developers.google.com/recaptcha/images/newCaptchaAnchor.gif" alt="Recap" class="responsive-img" width="320" height="105">
                 </div>
                 <div class="check">
-                  <a href="ver_doacoes.html"><i class="medium material-icons" id="checkIcon">check</i></a>
+                  <a id="btnEnviar"><i class="medium material-icons" id="checkIcon">check</i></a>
                 </div>
                 <div class="close">
                   <a href="javascript:history.back()">
@@ -99,26 +99,9 @@ button{
         </div>
     </div>
 </div>
-
-<script>
-  const realFileBtn = document.getElementById("real-file");
-  const customBtn = document.getElementById("custom-button");
-  const customTxt = document.getElementById("custom-text");
-
-  customBtn.addEventListener("click", function() {
-  realFileBtn.click();
-  });
-
-  realFileBtn.addEventListener("change", function() {
-  if (realFileBtn.value) {
-  customTxt.innerHTML = realFileBtn.value.match( /[\/\\]([\w\d\s\.\-\(\)]+)$/ )[1];
-  } else {
-    customTxt.innerHTML = "Nenhum arquivo selecionado, ainda.";
-  }
-});
-</script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/auto.js"></script><!-- Arquivo JS para inializar calendario do materialize -->
+  <script src="js/registro_doacao.js"></script>
 </body>
 </html>

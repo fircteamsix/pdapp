@@ -104,8 +104,12 @@
         error_message.innerHTML = text;
         return false;
       }
-      alert("Mensagem enviada com sucesso!");
+
+      M.toast({html: 'Mensagem enviada com sucesso!'})
       return true;
+        setTimeout(function() {
+          window.location.href = "doacao.html";
+        }, 3000);
       }
 
   </script>
