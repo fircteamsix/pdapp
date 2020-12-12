@@ -97,10 +97,9 @@
         
         <p class="left">Data de término da campanha</p>
         <input type="text" class="datepicker" id="dataTermino">
-        
-        <p>Hospital ou Centro Médico para direcionar a doação:</p>
-        <input type="text" id="nomeUnidade"><br><br><br>
-      
+        <p>Local para doação:</p>
+        <input type="text" id="localDoacao"><br><br><br>
+              
         <div class="switch">
           <p>Doação Específica</p>
           <label>
@@ -110,27 +109,31 @@
         </div><br>
       
       <p id="text" style="display:none;">Nome da pessoa necessitada
-        <input type="text" id="nomeReceptor">
-        
-        <br><br>Tipo sanguíneo?<br>
-          <label>
-              <input value="a" name="group1" type="radio" checked />
-              <span>A</span>
-          </label>
-          <label>
-            <input value="ab" name="group1" type="radio" />
-            <span>AB</span>
-          </label>
-          <label>
-              <input value="b" name="group1" type="radio" />
-              <span>B</span>
-          </label>
-          <label>
-              <input value="o" name="group1" type="radio" />
-              <span>O</span>
-          </label><br><br>
-          
-        
+      <input type="text" id="nomeReceptor">
+      Hospital ou Centro Médico para direcionar a doação:
+      <input type="text" id="nomeUnidade">
+      <br><br>
+      Tipo sanguíneo?
+      <br>
+      <label>
+          <input value="a" name="group1" type="radio" checked />
+          <span>A</span>
+      </label>
+      <br>
+      <label>
+        <input value="ab" name="group1" type="radio" />
+        <span>AB</span>
+      </label>
+      <br>
+      <label>
+          <input value="b" name="group1" type="radio" />
+          <span>B</span>
+      </label>
+      <br>
+      <label>
+          <input value="o" name="group1" type="radio" />
+          <span>O</span>
+      </label><br>        
           <br>Fator RH<br>
           <label>
             <input value="+" name="group2" type="radio" />

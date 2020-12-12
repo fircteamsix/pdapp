@@ -35,39 +35,37 @@
                         <label>Tipo sanguíneo</label>
                         <!-- Retirar essas quebras, que esta horrivel -->
                         <br>
+                        <label>
+                            <input value="a" name="group1" type="radio" checked />
+                            <span>A</span>
+                        </label>
                         <br>
-                            <center>
+                        <label>
+                          <input value="ab" name="group1" type="radio" />
+                          <span>AB</span>
+                        </label>
+                        <br>
+                        <label>
+                            <input value="b" name="group1" type="radio" />
+                            <span>B</span>
+                        </label>
+                        <br>
+                        <label>
+                            <input value="o" name="group1" type="radio" />
+                            <span>O</span>
+                        </label><br>
+                            <label>Fator RH</label> <br>
                             <label>
-                                <input value="a" name="group1" type="radio" checked />
-                                <span>A</span>
-                            </label>
-                            <label>
-                              <input value="ab" name="group1" type="radio" />
-                              <span>AB</span>
-                            </label>
-                            <label>
-                                <input value="b" name="group1" type="radio" />
-                                <span>B</span>
-                            </label>
-                            <label>
-                                <input value="o" name="group1" type="radio" />
-                                <span>O</span>
+                              <input value="+" name="group2" type="radio" />
+                              <span>+ Positivo</span>
                             </label>
                             <br>
-                            <br>
-                            </center>
-                            <label>Fator RH</label><br>
-                        <center>
                             <label>
-                                <input value="+" name="frh" type="radio" />
-                                <span>+ Positivo</span>
+                              <input value="-" name="group2" type="radio" />
+                              <span>- Negativo</span>
                             </label>
-                            <label>
-                                <input value="-" name="frh" type="radio" />
-                                <span>- Negativo</span>
-                            </label>
-                        </center>
-                    </div><br>
+                            <br><br>
+                    </div>
                     <div class="form-field col s12">
                         <label for="password">Telefone</label>
                         <input type="text"  id="telefone">
@@ -76,12 +74,33 @@
                         <label for="password">UF</label>
                         <select id="uf">
                             <!-- Preencher com estados -->
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
                             <option value="PE">PE</option>
-                            <option value="PE">PB</option>
-                            <option value="PE">RJ</option>
-                            <option value="PE">RN</option>
-                            <option value="PE">RO</option>
-                            <option value="PE">AC</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
                         </select>
                     </div>  
                     <div class="form-field col s9">

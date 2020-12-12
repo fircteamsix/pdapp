@@ -115,3 +115,6 @@ input{
     box-shadow: none !important;
     border-bottom: none !important;
 }
+input{
+    text-align: center;
+}
