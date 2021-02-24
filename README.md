@@ -1,6 +1,6 @@
 # pdapp
 O PdApp é um projeto feito pela equipe da faculdade FICR ( PE ).<br>
-![](PDApp-Ui.jpg)
+<img src="PDApp-Ui.jpg" width="500">
 
 - Aplicativo tem a responsabilidade em contribuir com a disseminação da doação de sangue através de campanhas independentes.
 Além disso, o usuário tem acesso á informações pertinentes sobre o ato de doação e a busca por vários hemocentros,
